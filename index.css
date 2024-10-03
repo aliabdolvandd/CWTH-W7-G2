@@ -1,0 +1,36 @@
+h1::before , h1::after {
+    content: " ";
+    /* color: aqua; */
+    background-color: aqua;
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+h1::before{
+    left: -30px;
+    top: 50%;
+    transform: translate(0 , -50%);
+}
+h1::after{
+    right: -30px;
+    top: 50%;
+    transform: translate(0 , -50%);
+}
+h1{
+    position: relative;
+    display: inline-block;
+    margin: 50px;
+    /* margin-left: 20px; */
+}
+
+/* soal2 */
+
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
