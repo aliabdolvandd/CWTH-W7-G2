@@ -1,0 +1,95 @@
+:root {
+    --main-bg-color: #34a9d5; 
+    --hover-bg-color: #3fc45f; 
+    --content-bg-color: #ffffff; 
+    --button-color: #007bff;
+    --text-color: #333;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.card-container {
+    background-color: var(--content-bg-color);
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    background-color: var(--main-bg-color);
+    padding: 20px;
+    border-radius: 20% 90% / 80% 80%;
+    text-align: center;
+    width: 200px; 
+    transition: background-color 0.3s ease;
+    position: relative; 
+    /* transform: skewY(-5deg); */
+
+    
+}
+
+
+.card:hover {
+    background-color: var(--hover-bg-color);
+}
+
+
+.card::before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5); 
+    
+    
+    
+}
+
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    margin-top: 80px; 
+}
+
+.job {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+
+.follow-btn {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+}
+
+.follow-btn:hover {
+    background-color: darken(var(--button-color), 10%);
+}
